@@ -6,10 +6,10 @@ const urlCurrentWeatherData = 'https://api.openweathermap.org/data/2.5/weather';
 const urlForecastWeatherData = 'https://api.openweathermap.org/data/2.5/forecast';
 const currentCity = 'cordoba';
 
-export const fetchCurrentWeatherData = async () => {
+export const fetchCurrentWeatherData = async (query) => {
   const { data, error } = await axios.get(urlCurrentWeatherData, {
     params: {
-      q: currentCity,
+      q: query,
       units: units,
       appid: appid
     }
@@ -25,7 +25,7 @@ export const fetchCurrentWeatherData = async () => {
 export const fetchForecastWeatherData = async (query) => {
   const { data, error } = await axios.get(urlForecastWeatherData, {
     params: {
-      q: currentCity,
+      q: query,
       units: units,
       appid: appid
     }
