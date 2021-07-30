@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { fetchCurrentWeatherData  } from './api/fetchWeather';
+import { fetchCurrentWeatherData, fetchForecastWeatherData } from './api/fetchWeather';
+import CurrentWeather from './components/CurrentWeather/CurrentWeather';
 
 function App() {
-  
+
   const [currentWeatherData, setCurrentWeatherData] = useState();
   console.log(currentWeatherData);
-  
+
   const getCurrentWeatherData = async () => {
     const data = await fetchCurrentWeatherData();
     setCurrentWeatherData(data);
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      tech challenge weather
+      <CurrentWeather currentWeatherData={currentWeatherData} />
     </>
   );
 }
