@@ -6,14 +6,14 @@ import { fetchUrlIcon } from '../../api/fetchWeather';
 import { dateTransform } from '../../api/dateTransform';
 
 
-const SimpleWeather = ({ weather }) => {
+const SimpleWeather = ({ weather, isLoading }) => {
   console.log(weather);
 
   const { Text } = Typography;
   return (
     <Card
       hoverable
-      // loading={false}
+      loading={isLoading}
       style={{
         textAlign: 'center',
         fontSize: 15,

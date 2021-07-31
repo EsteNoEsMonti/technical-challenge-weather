@@ -3,7 +3,7 @@ import { Col, Row } from 'antd';
 
 import SimpleWeather from '../SimpleWeather/SimpleWeather';
 
-const ListSimpleWeather = ({ forecastWeatherData }) => {
+const ListSimpleWeather = ({ forecastWeatherData, isLoading }) => {
   return (
     <>
       {
@@ -15,7 +15,7 @@ const ListSimpleWeather = ({ forecastWeatherData }) => {
                 if (weather.dt_txt.includes('12:00:00')) {
                   return (
                     <Col>
-                      <SimpleWeather weather={weather} />
+                      <SimpleWeather weather={weather} isLoading={isLoading} />
                     </Col>
                   )
                 }

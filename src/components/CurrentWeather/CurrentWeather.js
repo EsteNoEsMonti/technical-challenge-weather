@@ -1,22 +1,24 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Typography, Image } from 'antd';
+import { Row, Col, Typography, Image, Spin } from 'antd';
 
 import { fetchUrlIcon } from '../../api/fetchWeather';
 
-const CurrentWeather = ({ currentWeatherData }) => {
+const CurrentWeather = ({ currentWeatherData, isLoading }) => {
 
   const { Title, Text } = Typography;
 
   return (
-    <>
-
+    <Spin
+      size="large"
+      tip="Loading weather..."
+      spinning={isLoading }
+    >
       {
         currentWeatherData &&
         <>
           <Row justify="center">
             <Col xs={24} sm={24} md={12} lg={12}>
-
               <Row align="middle">
                 <Col>
                   <Image
@@ -35,19 +37,17 @@ const CurrentWeather = ({ currentWeatherData }) => {
 
               <Row>
                 <Col>
-                  <Title level={5}>Temp Max: <b>{currentWeatherData?.main?.temp_max} °C</b></Title>
-
+                  <Title level={5}>Temp Max: <b>{parseInt(currentWeatherData?.main?.temp_max)} °C</b></Title>
                 </Col>
 
                 <Col style={{ marginLeft: '5%' }}>
-                  <Title level={5}>Temp Min: <b>{currentWeatherData?.main?.temp_min} °C</b></Title>
-
+                  <Title level={5}>Temp Min: <b>{parseInt(currentWeatherData?.main?.temp_min)} °C</b></Title>
                 </Col>
               </Row>
 
               <Row>
                 <Col style={{ marginRight: '10%' }}>
-                  <Text style={{ color: '#8c8c8c' }}>Feels Like: <b>{currentWeatherData?.main?.feels_like} °C</b></Text> <br />
+                  <Text style={{ color: '#8c8c8c' }}>Feels Like: <b>{parseInt(currentWeatherData?.main?.feels_like)} °C</b></Text> <br />
                   <Text style={{ color: '#8c8c8c' }}>Humidity: <b>{currentWeatherData?.main?.humidity}%</b></Text> <br />
                   <Text style={{ color: '#8c8c8c' }}>Pressure: <b>{currentWeatherData?.main?.pressure} hPa</b></Text> <br />
                   <Text style={{ color: '#8c8c8c' }}>Cloudiness: <b>{currentWeatherData?.clouds.all}%</b></Text> <br />
@@ -70,7 +70,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
           </Row>
         </>
       }
-    </>
+    </Spin>
   );
 };
 
