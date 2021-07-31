@@ -5,7 +5,6 @@ import { Row, Col, Typography, Image } from 'antd';
 import { fetchUrlIcon } from '../../api/fetchWeather';
 
 const CurrentWeather = ({ currentWeatherData }) => {
-  console.log(currentWeatherData);
 
   const { Title, Text } = Typography;
 
@@ -15,9 +14,6 @@ const CurrentWeather = ({ currentWeatherData }) => {
       {
         currentWeatherData &&
         <>
-          {
-            console.log(currentWeatherData.weather[0].icon)
-          }
           <Row justify="center">
             <Col xs={24} sm={24} md={12} lg={12}>
 
@@ -26,6 +22,7 @@ const CurrentWeather = ({ currentWeatherData }) => {
                   <Image
                     width={100}
                     src={fetchUrlIcon(currentWeatherData.weather[0].icon)}
+                    preview={false}
                   />
                 </Col>
                 <Col style={{ verticalAlign: 'middle' }}>
@@ -48,8 +45,6 @@ const CurrentWeather = ({ currentWeatherData }) => {
                 </Col>
               </Row>
 
-
-
               <Row>
                 <Col style={{ marginRight: '10%' }}>
                   <Text style={{ color: '#8c8c8c' }}>Feels Like: <b>{currentWeatherData?.main?.feels_like} °C</b></Text> <br />
@@ -63,7 +58,6 @@ const CurrentWeather = ({ currentWeatherData }) => {
                   <Text style={{ color: '#8c8c8c' }}>Wind gust: <b>{currentWeatherData?.wind?.gust} m/s</b></Text> <br />
                 </Col>
               </Row>
-
             </Col>
 
             <Col xs={24} sm={24} md={12} lg={12} style={{ textAlign: 'right' }}>
@@ -76,13 +70,12 @@ const CurrentWeather = ({ currentWeatherData }) => {
           </Row>
         </>
       }
-
     </>
-  )
-}
+  );
+};
 
 CurrentWeather.propTypes = {
   currentWeatherData: PropTypes.any.isRequired
-}
+};
 
 export default CurrentWeather;
