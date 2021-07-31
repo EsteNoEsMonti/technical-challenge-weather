@@ -7,9 +7,9 @@ const PublicLayoutPage = ({ children }) => {
   return (
     <Layout>
       <Header>
-        Header Component
+        <div className="logo" />
       </Header>
-      <Content style={{ minHeight: 800  }}>
+      <Content style={{ minHeight: 800, backgroundColor: 'white', margin: 20, padding: 10 }}>
         {children}
       </Content>
       <Footer>

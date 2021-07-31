@@ -2,7 +2,6 @@ import React from 'react'
 import SimpleWeather from '../SimpleWeather/SimpleWeather';
 
 const ListSimpleWeather = ({ forecastWeatherData }) => {
-  console.log(forecastWeatherData);
   return (
     <>
       Forecast List Component ||

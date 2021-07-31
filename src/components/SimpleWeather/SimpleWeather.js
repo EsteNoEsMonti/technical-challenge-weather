@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const SimpleWeather = ({ weather }) => {
-  console.log(weather);
   return (
     <>
       <div style={{ backgroundColor: 'skyblue', margin: 10 }}>

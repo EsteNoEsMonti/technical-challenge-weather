@@ -37,3 +37,9 @@ export const fetchForecastWeatherData = async (query) => {
     return data;
   }
 };
+
+export const fetchUrlIcon = (icon) => {
+  const url = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  console.log(typeof url);
+  return url;
+};

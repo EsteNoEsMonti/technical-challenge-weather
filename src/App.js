@@ -56,7 +56,7 @@ function App() {
       <CurrentWeather currentWeatherData={currentWeatherData} />
       <hr />
       <ListSimpleWeather forecastWeatherData={forecastWeatherData} />
-    
+     
     </PublicLayout>
   );
 }
