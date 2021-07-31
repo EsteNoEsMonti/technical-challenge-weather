@@ -64,15 +64,13 @@ const CurrentWeather = ({ currentWeatherData }) => {
                 </Col>
               </Row>
 
-
-
             </Col>
 
             <Col xs={24} sm={24} md={12} lg={12} style={{ textAlign: 'right' }}>
-              <Title>{currentWeatherData?.name}, {currentWeatherData?.sys?.country}</Title>
-              <Title level={3} style={{ color: '#8c8c8c' }}>{new Date().toDateString()}</Title>
-              <Title level={3}>{currentWeatherData?.weather[0]?.main}</Title>
-              <Title level={5}>{currentWeatherData?.weather[0]?.description}</Title>
+              <Title style={{ marginBottom: 0 }}>{currentWeatherData?.name}, {currentWeatherData?.sys?.country}</Title>
+              <Text level={3} style={{ color: '#8c8c8c', fontSize: 30, margin: 0 }}>{new Date().toDateString()}</Text>
+              <Title level={3} style={{ margin: 0 }}>{currentWeatherData?.weather[0]?.main}</Title>
+              <Text level={5} style={{ color: '#8c8c8c', fontSize: 20, marginTop: 0 }}>{currentWeatherData?.weather[0]?.description}</Text>
             </Col>
 
           </Row>
