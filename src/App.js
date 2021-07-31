@@ -4,6 +4,7 @@ import { Select } from 'antd';
 import { fetchCurrentWeatherData, fetchForecastWeatherData } from './api/fetchWeather';
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
 import ListSimpleWeather from './components/ListSimpleWeather/ListSimpleWeather';
+import PublicLayout from './components/PublicLayout/PublicLayout';
 
 function App() {
   const { Option } = Select;
@@ -32,7 +33,8 @@ function App() {
   }, [query]);
 
   return (
-    <>
+    <PublicLayout>
+
       <Select
         showSearch
         style={{ width: 200 }}
@@ -54,7 +56,8 @@ function App() {
       <CurrentWeather currentWeatherData={currentWeatherData} />
       <hr />
       <ListSimpleWeather forecastWeatherData={forecastWeatherData} />
-    </>
+    
+    </PublicLayout>
   );
 }
 
