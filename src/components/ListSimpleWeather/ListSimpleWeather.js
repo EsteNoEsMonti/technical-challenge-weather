@@ -25,7 +25,6 @@ const ListSimpleWeather = ({ forecastWeatherData, isLoading }) => {
             }
           </Row>
         </>
-
       }
     </>
   );
