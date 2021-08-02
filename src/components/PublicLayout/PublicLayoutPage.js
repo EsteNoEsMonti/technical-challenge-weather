@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout } from 'antd';
 
 const PublicLayoutPage = ({ children }) => {
   const { Header, Content, Footer } = Layout;
@@ -12,7 +12,6 @@ const PublicLayoutPage = ({ children }) => {
       <Content style={{
         minHeight: 800,
         backgroundColor: 'white',
-        // maxWidth: 1200,
         padding: 20,
         marginTop: 10,
         marginLeft: '5%',

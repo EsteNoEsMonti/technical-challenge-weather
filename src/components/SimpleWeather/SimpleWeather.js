@@ -1,13 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Typography, Image, Card } from 'antd';
-
 import { fetchUrlIcon } from '../../api/fetchWeather';
 import { dateTransform } from '../../api/dateTransform';
 
-
 const SimpleWeather = ({ weather, isLoading }) => {
-  console.log(weather);
 
   const { Text } = Typography;
   return (
@@ -38,13 +34,8 @@ const SimpleWeather = ({ weather, isLoading }) => {
 
       <Text>{parseInt(weather?.main?.temp_max)}°C</Text>
       <Text style={{ color: '#8c8c8c', marginLeft: 10 }}>{parseInt(weather?.main?.temp_min)}°C</Text>
-
     </Card>
   );
 };
 
-SimpleWeather.propTypes = {
-
-}
-
-export default SimpleWeather
+export default SimpleWeather;

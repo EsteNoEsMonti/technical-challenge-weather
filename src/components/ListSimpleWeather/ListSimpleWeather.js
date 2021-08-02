@@ -18,6 +18,8 @@ const ListSimpleWeather = ({ forecastWeatherData, isLoading }) => {
                       <SimpleWeather weather={weather} isLoading={isLoading} />
                     </Col>
                   )
+                } else {
+                  return null;
                 }
               })
             }

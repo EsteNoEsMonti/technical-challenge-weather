@@ -16,21 +16,21 @@ const Weather = () => {
     setForecastIsLoading(true);
   };
 
-  const getCurrentWeatherData = async () => {
+  const getCurrentWeatherData = async (query) => {
     const data = await fetchCurrentWeatherData(query);
     setCurrentWeatherData(data);
     setCurrentIsLoading(false);
   };
 
-  const getForecastWeatherData = async () => {
+  const getForecastWeatherData = async (query) => {
     const data = await fetchForecastWeatherData(query);
     setForecastWeatherData(data);
     setForecastIsLoading(false);
   };
 
   useEffect(() => {
-    getCurrentWeatherData();
-    getForecastWeatherData();
+    getCurrentWeatherData(query);
+    getForecastWeatherData(query);
   }, [query]);
 
   return (
