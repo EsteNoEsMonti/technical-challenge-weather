@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Row, Col, Typography, Image, Spin, Card } from 'antd';
 import { fetchUrlIcon } from '../../api/fetchWeather';
 
@@ -76,10 +75,6 @@ const CurrentWeather = ({ currentWeatherData, isLoading }) => {
       </Spin>
     </Card>
   );
-};
-
-CurrentWeather.propTypes = {
-  currentWeatherData: PropTypes.any.isRequired
 };
 
 export default CurrentWeather;

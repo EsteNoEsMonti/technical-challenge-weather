@@ -11,10 +11,10 @@ const ListSimpleWeather = ({ forecastWeatherData, isLoading }) => {
         <>
           <Row justify="space-around">
             {
-              forecastWeatherData.list.map(weather => {
+              forecastWeatherData.list.map((weather, index) => {
                 if (weather.dt_txt.includes('12:00:00')) {
                   return (
-                    <Col>
+                    <Col key={index}>
                       <SimpleWeather weather={weather} isLoading={isLoading} />
                     </Col>
                   )
