@@ -12,7 +12,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-También puede ver el funcionamiento de la aplicación en: [Netlify App](https://zealous-kalam-87c61d.netlify.app/).
+You can also see the operation of the application in: [Netlify App](https://zealous-kalam-87c61d.netlify.app/).
 
 ## installed dependencies
 ### `axios`
