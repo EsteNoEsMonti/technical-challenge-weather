@@ -1,9 +1,7 @@
 import React from 'react';
 import { Select, Typography } from 'antd';
-
 import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import ListSimpleWeather from '../ListSimpleWeather/ListSimpleWeather';
-
 
 const WeatherPage = ({
   onChange,
@@ -12,8 +10,10 @@ const WeatherPage = ({
   forecastWeatherData,
   forecastIsLoading
 }) => {
+  
   const { Option } = Select;
   const { Title } = Typography;
+  
   return (
     <>
       <div style={{ textAlign: 'center' }}>

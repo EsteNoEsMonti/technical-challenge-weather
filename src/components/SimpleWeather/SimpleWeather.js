@@ -2,27 +2,19 @@ import React from 'react';
 import { Typography, Image, Card } from 'antd';
 import { fetchUrlIcon } from '../../api/fetchWeather';
 import { dateTransform } from '../../api/dateTransform';
+import styles from './SimpleWeather.module.css';
 
 const SimpleWeather = ({ weather, isLoading }) => {
 
   const { Text } = Typography;
+  
   return (
     <Card
       hoverable
       loading={isLoading}
-      style={{
-        textAlign: 'center',
-        fontSize: 15,
-        marginTop: 10,
-        minWidth: 148,
-        minHeight: 208
-      }}
+      className={styles.cardContainer}
     >
-      <Text
-        style={{
-          fontSize: 20
-        }}
-      >
+      <Text className={styles.textDate}>
         {dateTransform(weather.dt_txt)}
       </Text> <br />
 
