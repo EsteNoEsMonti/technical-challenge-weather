@@ -12,7 +12,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-También puede ver el funcionamiento de la aplicación en: ...........
+También puede ver el funcionamiento de la aplicación en: [Netlify App](https://zealous-kalam-87c61d.netlify.app/).
 
 ## installed dependencies
 ### `axios`
@@ -29,4 +29,3 @@ appid: `3dcb61320c458d6472d47373d1562059`
 You must place it in 
 `'src / api / fetchWeather.js' line 3`
  You will know where when the time comes.
- 

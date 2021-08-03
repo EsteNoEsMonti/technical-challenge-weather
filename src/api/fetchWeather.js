@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const appid = '3dcb61320c458d6472d47373d1562059';
+const appid = ''; // Between the quotes my friend
 const units = 'metric';
 const urlCurrentWeatherData = 'https://api.openweathermap.org/data/2.5/weather';
 const urlForecastWeatherData = 'https://api.openweathermap.org/data/2.5/forecast';
